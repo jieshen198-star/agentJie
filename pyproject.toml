@@ -1,0 +1,22 @@
+[project]
+name = "agentjie"
+version = "0.1.0"
+description = "Multi-agent collaborative development automation system"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pydantic>=2.8.0"
+]
+optional-dependencies = {openai = ["openai>=1.0.0"]}
+
+[project.scripts]
+agentjie = "agentjie.runner:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
